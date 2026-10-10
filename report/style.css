@@ -122,7 +122,7 @@ footer {
 } 
 
 /*Tablet*/
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .top-row {
         display: flex; /*keeps the title and hamburger button on the same line */
         justify-content: space-between; /* places the title on the left and the hamburger on the right */

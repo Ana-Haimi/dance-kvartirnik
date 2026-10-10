@@ -261,7 +261,7 @@ nav a:hover {
     font-size: 30px; /* size of the text */
     font-weight: 300; /*thinkness of the text */
     color: darkgray; /* text color */
-    margin-top: 50px; /* space above the text */
+    margin-top: 70px; /* space above the text */
 }
 
 footer {
@@ -273,7 +273,7 @@ footer {
 } 
 
 /*Tablet*/
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
     main {
         display: flex; /*uses flexbox inside the main content area*/

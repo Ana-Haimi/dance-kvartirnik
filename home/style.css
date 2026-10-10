@@ -167,8 +167,8 @@ nav a:hover {
     width: 450px; /*size of the second picture*/
     height: 250px;
     object-fit: cover;
-    left: 40px; /*position from the left*/
-    bottom: -40px; /*position from the top*/
+    left: -25px; /*position from the left*/
+    bottom: -30px; /*position from the top*/
     z-index: 5;
     border-radius: 8px; /*rounded corners*/
 }
@@ -180,8 +180,8 @@ nav a:hover {
     transform-origin: center; /*makes the record rotate around its center*/
 
     margin-right: 0;
-    margin-left: -50px;
-    margin-top: -50px;
+    margin-left: 0px;
+    margin-top: -10px;
     margin-bottom: 20px;
 }
 
@@ -234,7 +234,7 @@ footer {
 
 
 /*Tablet*/
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .top-row {
         display: flex; /*keeps the title and hamburger button on the same line */
         justify-content: space-between; /* places the title on the left and the hamburger on the right */

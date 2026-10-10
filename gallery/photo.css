@@ -13,7 +13,7 @@ body{
 .photo-gallery img,
 .photo-gallery video {
     width: 100%; /*gives photos and videos the same size*/
-    height: 650px; /*keeps all gallert items the same shape*/
+    height: 700px; /*keeps all gallert items the same shape*/
     object-fit: cover; /*fills the box without stretching the media*/
     border-radius: 8px; 
     display: block; /*removes extra inline spacing*/

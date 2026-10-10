@@ -91,6 +91,9 @@ nav a:hover {
     line-height: 1.5; /* space between lines of text */
     text-align: center; /* aligns the text to both the left and right sides */
     color: wheat;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
 
     width:100%; /* width of the text */
     margin: 30px auto 0;
@@ -153,8 +156,8 @@ nav a:hover {
 
 .time {
     font-family: 'Playfair Display', serif; /* font of the text */
-    font-size: 20px; /* size of the text */
-    font-weight: 300; /*thinkness of the text */
+    font-size: 25px; /* size of the text */
+    font-weight: 1000; /*thinkness of the text */
     line-height: 1.5; /* space between lines of text */
     text-align: center; /* aligns the text to both the left and right sides */
     color: wheat;
@@ -184,7 +187,7 @@ footer {
 } 
 
 /*Tablet*/
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .top-row {
         display: flex; /*keeps the title and hamburger button on the same line */
         justify-content: space-between; /* places the title on the left and the hamburger on the right */

@@ -113,6 +113,52 @@ nav a:hover {
     margin-top: 15px;
     color: wheat;  
 }
+
+/* Site Map */
+.site-map {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.site-map h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    width: 100%; /*makes the heading use the full available width*/
+    margin: 50px auto 10px; /*centers the heading block*/
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.site-map p {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 20px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center;
+    width: 100%; /*makes the text block use the available width*/
+    padding: 0 15px; /*adds 15px space on the left and right*/
+    box-sizing: border-box; /*keeps padding inside the width*/
+
+    margin: 15px auto 0; /*centers the text block*/
+    margin-top: 15px;
+    color: wheat;  
+}
+
+.site-map img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
 footer {
     color: whitesmoke;
 }
@@ -181,6 +227,15 @@ footer {
         margin-right: auto; /*centers the text*/
         font-size: 20px; /*makes the report text slightly smaller*/
     }
+        .site-map {
+        max-width: 90%;
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .site-map img {
+        max-width: 550px;
+    }
 
     footer {
         margin-top: 30px; /*reduces the space above the footer*/
@@ -226,6 +281,15 @@ footer {
         width: 90%; /*makes the report text fit the mobile screen*/
         max-width: none; /*removes the tablet maximum width*/
         margin: 10px auto 30px; /*centers the report and adds vertical spacing*/
+    }
+
+    .site-map {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .site-map img {
+        max-width: 100%;
     }
 
     footer {

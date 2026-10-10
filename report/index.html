@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+      <!--Title and main menu-->
+    <header class="top-row">
+        <!--title on the left side-->
+        <div class="title-box">
+             <h1>Report</h1>
+        </div>
+    <!--Main menu on the right side-->
+        <nav>
+            <!-- Hamburger button for tablet and mobile -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- Main menu -->
+             <ul id="nav-menu">
+                 <li><a href="../home/index.html">Home</a></li>
+                 <li><a href="../about/index.html">About</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                 <li><a href="../registration/index.html">Registration</a></li>
+                 <li><a href="../report/index.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main> 
+    <section>
+        <div class="text">
+            <h2>Web development report</h2>
+        </div>
+        
+        <div class="essay">
+            <p>For this course project, I created a website for a fictional event called “Dance Kvartirnik.”  The original idea actually came from a friend of mine 
+            who is a dancer. I wanted to create something that felt more like a real project and not just a school assignment. 
+            Something that I can modify after I learn more, and my friend can use my website to start doing events like that in Finland.</p>
+
+            <p>
+            I created five pages: home, about, gallery, registration, and report. Before the course started, I had no even the slightest idea how you could 
+            make a working website. My favourite part of this project was the vinyl animation, with playable audio when you click it; I used SVG to draw it, 
+            CSS to make it rotate, and JavaScript to connect it to music. However, getting the audio to work was not as easy as I thought it would be. I spent quite
+            some time trying to understand why the browser could not load the file, and with the browser console, I made it work, and I was very excited and very 
+            happy when it did work! So probably if I need to choose what I would like to receive extra points for, it is definitely the record. The other visual 
+            design was cool all the small details, colours, fonts. Sometimes I spent more time than I expected trying to make two elements look good together.</p>
+
+            <p>
+            But the biggest challenge was making the website responsive. At first, everything looked fine on my laptop, but when I checked other screen sizes, 
+            some elements were suddenly in completely wrong places. Especially the overlapping images on the home page caused me problems. I had to change their 
+            positioning several times and use CSS media queries to make the layout work on desktop, tablet, and mobile screens. It was probably the most frustrating
+            part of the project, but also one of the most useful things I learned.</p>
+
+            <p>
+            Some tasks, like creating the basic HTML structure and adding text, were quite straightforward. On the other hand, working with responsive images, 
+            positioning, and JavaScript required much more patience. I also realised that even a small design change can sometimes create problems somewhere 
+            else on the page.</p>
+
+            <p>
+            During the course, I learned much more than just HTML and CSS. I started to understand how different parts of a website work and what is behind every
+            website. I worked on this project for approximately three days a week over three weeks. If I continued developing it, I would improve some of the 
+            responsive layouts and add more interactive features. Overall, I am happy with the result, especially the colour scheme and the vinyl record. 
+            The website is not perfect, but I like that it has its own atmosphere and that I managed to turn my original idea into something that actually works, 
+            and hopefully one day this website is going to be perfect.</p>
+        </div>
+    </section>
+</main>
+    <footer>Made by Ana 2026</footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle"); // finds the hamburger button
+    const navMenu = document.getElementById("nav-menu"); // finds the navigation menu
+
+    menuToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("show");
+})
+</script>
+
+</body>
+</html>

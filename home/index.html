@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Dance Kvartirnik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Title and main menu-->
+    <header class="top-row">
+        <!--title on the left side-->
+        <div class="title-box">
+             <h1>Dance kvartirnik</h1>
+        </div>
+    <!--Main menu on the right side-->
+        <nav>
+            <!-- Hamburger button for tablet and mobile -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- Main menu -->
+             <ul id="nav-menu">
+                 <li><a href="../home/index.html">Home</a></li>
+                 <li><a href="../about/index.html">About</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                 <li><a href="../registration/index.html">Registration</a></li>
+                 <li><a href="../report/index.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section>
+            <div class="question">
+                 <h2>What is a dance kvartirnik?</h2>
+            </div>
+
+         <div class="content">
+                <div class="text">
+                    <p>A dance kvartirnik is a modern twist on the traditional Russian kvartirnik—small, home‑based gatherings rooted in the 1970s–80s apartment concerts
+                     that offered artists a safe space for creativity and connection. Today, it’s an intimate dance event held in a cozy apartment or loft, with a warm,
+                     home-like atmosphere and a curated guest list. The evening usually opens with short live performances, then shifts into an open dance floor with a DJ
+                     or carefully selected music. Guests are invited to move freely, connect, and enjoy a relaxed, creative environment where the line between performer and
+                     audience disappears.</p>
+                </div>
+
+            <div class="picture"
+                <!-- Main responsive picture --!>
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="../img/mobil.jpeg">
+                        <source media="(max-width: 1100px)" srcset="../img/tabl.jpeg">
+                        <img class="photo-one" src="../img/desk.jpeg" alt="Dance performance">
+                    </picture>
+                <!--second picture-->
+                <img class="photo-two" src="../img/pho2.jpeg" alt="Instrument picture">
+            </div>
+         </div>
+
+
+        <svg id="record" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="vinyl" cx="60" cy="60" r="55"></circle>
+            
+            <circle class="groove" cx="60" cy="60" r="46"></circle>
+            <circle class="groove" cx="60" cy="60" r="39"></circle>
+            <circle class="groove" cx="60" cy="60" r="32"></circle>
+
+
+            <circle class="vinyl-lable" cx="60" cy="60" r="22"></circle>
+            <circle class="vinyl-hole" cx="60" cy="60" r="5"></circle>
+
+            <!--text on the vinyl label-->
+            <text
+                x="60"
+                y="48"
+                text-anchor="middle"
+                font-size="5.5"
+                fill="#fde9d0">
+                DANCE
+            </text>
+        </svg>
+
+    </section>
+</main>
+
+<footer>Made by Ana 2026</footer>
+
+<script>
+    // Finds the vinyl record by its id
+    const record = document.getElementById("record");
+
+    // Creates an audio object and connects the music file
+    const music = new Audio("../img/audio.mp3");
+
+    // Loads the audio file in advance
+    music.preload = "auto";
+
+    // Keeps track of whether the music is playing
+    let isPlaying = false;
+
+    // Runs when the user clicks the vinyl record
+    record.addEventListener("click", function () {
+
+        // If the music is not playing
+        if (isPlaying === false) {
+
+            // Starts the music
+            music.play();
+
+            // Starts the vinyl animation
+            record.classList.add("spinning");
+
+            // Remembers that the music is playing
+            isPlaying = true;
+
+        } else {
+
+            // Pauses the music
+            music.pause();
+
+            // Stops the vinyl animation
+            record.classList.remove("spinning");
+
+            // Remembers that the music is paused
+            isPlaying = false;
+        }
+    });
+</script>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle"); // finds the hamburger button
+    const navMenu = document.getElementById("nav-menu"); // finds the navigation menu
+
+    menuToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("show");
+})
+</script>
+
+</body>
+</html>

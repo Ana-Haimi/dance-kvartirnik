@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #231512;
+    margin: 0;
+    min-height: 100vh; /* Makes the page fill at least the full screen height */
+    display: flex; /* Uses Flexbox for the whole page */
+    flex-direction: column; /* Places page sections vertically */
+}
+
+main {
+    flex: 1; /* Pushes the footer toward the bottom of the screen */
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/*Title and main menu on the same line*/
+.top-row {
+    display: flex; /*makes the title and main menu on the same line*/
+    align-items: center; /*keeps the title and main menu centered*/
+    justify-content: space-between; /*puts the title on the left and the main menu on the right*/
+    padding: 20px 20px; /*space around the whole top row*/
+}
+
+/*Main menu*/
+nav ul {
+    display: flex; /* makes the list items display in a row */
+    gap: 40px; /* space between the buttons */
+
+    list-style: none; /* removes the default bullet points */
+    padding: 0; /* space around the whole menu */
+    margin: 0; /* removes the default margin */
+    }
+
+nav li {
+    margin: 0; /* removes the default margin */
+    }
+
+nav a {
+    display: block; /* makes the whole buttin clicable */
+
+    width: 130px; /* width of the button */
+    padding: 10px 0px; /* space inside the button */
+
+    background-color: #563527; /* color of the button */
+    color: whitesmoke; /* text color */
+
+    text-align: center; /* centers the text */
+    text-decoration: none; /* removes the underline from the text */
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 18px; /* size of the text */
+    border-radius: 8px; /* rounded corners */
+}
+
+/*Changes the color of the button when the mouse is over it*/
+nav a:hover {
+    background-color: #895c39; /* color of the button when the mouse is over it */
+}
+
+.title-box{
+    display: flex;
+    align-items: center; /* keeps the text centered */
+    gap: 30px;
+  
+    background-color: #563527; /*dark box with the title*/
+    color: whitesmoke; /*text color*/
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    
+    padding: 5px 35px; /* space inside */
+    border-radius: 12px; /* rounded corners */
+
+    width: fit-content;  /* box fits around the text */
+    margin-left: 0px; /* moves the box to the right */
+    margin-top: 0px; /* moves the box down */
+
+}
+
+.title-box h1 {
+    margin: 0; /* removes default margin */
+    font-size: inherit; /* inherits the font size from the parent */
+    font-weight: inherit; /* inherits the font weight from the parent */
+}
+
+.question h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /*centers the text */
+    width: 700px; /* width of the text */
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: wheat
+}
+
+.question p {
+    margin-bottom: 0;
+}
+
+.text {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 25px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: left; /* aligns the text to the left */
+    width: 700px; /* width of the text */
+    max-width: 45vw; /*prevents the text from becoming too wide for the screen*/
+    margin-left: 30px;
+    margin-top: 10px;
+    color: wheat;
+
+    border: 1px solid #563527; /*creates a thin border around the text*/
+    padding: 5px 10px; /*space inside the box*/
+    box-sizing: border-box; /*keeps padding and border inside the 700px width*/
+    border-radius: 12px;
+}
+
+
+.content {
+    display: flex;
+    align-items: flex-start; /*keeps the text and pictures aligned at the top*/
+    justify-content: space-between;
+    gap: 40px;
+    font-family: "Playfair Display", serif;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.picture {
+    position: relative; /*allows the second picture to overlap the first*/
+    width: 800px; /*total area for the pictures*/
+    max-width: 50vw; /*prevents the picture area from becoming too wide for the screen*/
+    height: 500px; /*total height of the area for both pictures*/
+    margin-right: 30px; /*space on the right*/
+    margin-top: 50px; /*moves both pictures down*/
+}
+
+.picture picture {
+    display: block; /*makes the responsive picture container display correctly*/
+}
+
+/*Main picture*/
+.picture  img.photo-one{
+    position: absolute; /*allowas manual positioning*/
+    width: 650px; /*sixe of the main picture*/
+    height: 410px;
+    object-fit: cover; /*fills given size*/
+    right: 0;
+    top: -45px; /*moves the picture 45px up*/
+    z-index: 1; /*main picture stays behind*/
+    border-radius: 8px; /*rounded corners*/
+}
+
+ /*Second picture*/
+.picture img.photo-two {
+    position: absolute; /*allows manual positioning*/
+    width: 450px; /*size of the second picture*/
+    height: 250px;
+    object-fit: cover;
+    left: 40px; /*position from the left*/
+    bottom: -40px; /*position from the top*/
+    z-index: 5;
+    border-radius: 8px; /*rounded corners*/
+}
+
+#record {
+    width: 120px;
+    height: 120px;
+    cursor: pointer; /*changes  the curcor to a pointer when hovering over the record*/
+    transform-origin: center; /*makes the record rotate around its center*/
+
+    margin-right: 0;
+    margin-left: -50px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+#record.spinning {
+    animation: spinRecord 3s linear infinite; /*rotates the record continuously every 3 seconds*/
+}
+
+/*creates the spinning animation*/
+@keyframes spinRecord {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.vinyl1 {
+    fill: #2f211d
+}
+.vinyl-lable {
+    fill: #ff0000
+}
+.vinyl-hole {
+    fill: #fde9d0
+}
+
+.groove {
+    fill: none;
+    stroke: rgb(15, 15, 15);
+    stroke-width: 1;
+}
+
+footer {
+    color: whitesmoke
+}
+
+.menu-toggle {
+    display: none; /*hides the hamburger menu in desktop*/
+} 
+
+
+/*Tablet*/
+@media (max-width: 1200px) {
+    .top-row {
+        display: flex; /*keeps the title and hamburger button on the same line */
+        justify-content: space-between; /* places the title on the left and the hamburger on the right */
+        align-items: flex-start; /*aligns them vertically */
+        padding: 20px; /*adds space around the top row */
+        gap: 20px; /*keeps a small gap between the elements */
+    }
+
+    .menu-toggle { /*shows the humburger button on tablet*/
+        display: block; /*makes the button visible*/
+        width: auto;
+        margin-left: auto;
+        background-color: #563527;
+        color: whitesmoke;
+        border: none; /*removes the default button border*/
+        border-radius: 8px;
+        font-size: 28px;
+        padding: 8px 15px; /*adds space insdie the button*/
+        cursor: pointer;
+    }
+
+    /* hides the navigation links until the hamburger is clicked */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    /*shows the navigation links when javascript adds the show class */
+    nav ul.show {
+        display: flex;
+    }
+    
+    /*makes the navigation buttons fit the opened menu */
+    nav a {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .title-box {
+        font-size: 45px; /*reduces the size of the title*/
+    }
+
+    .question h2 {
+        font-size: 25px; /*reduces the size of the question*/
+        width: 90%; /*reduces the width of the question*/
+        margin-left: auto; /*centers the question*/
+        margin-right: auto; /*centers the question*/
+    }
+
+    .content {
+        flex-direction: column; /*places the text and pictures under each other*/
+        align-items: center; /*centers the text and pictures*/
+        gap: 30px; /*reduces the space between the text and pictures*/
+    }
+
+    .text {
+        font-size: 22px; /*reduces the size of the text*/
+        width: 90%; /*reduces the width of the text*/
+        margin-left: auto; /*centers the text*/
+        margin-right: auto; /*centers the text*/
+    }
+
+    .picture {
+        width: 90%; /*reduces the width of the picture area*/
+        max-width: 700px;
+        height: 500px; /*reduces the height of the picture area*/
+        margin: 20px auto 0;
+    }
+
+    .picture img.photo-one {
+        width: 75%; /*reduces the width of the main picture*/
+        height: auto; /*makes the height of the main picture adjust to its width*/
+        max-height: 380px; /*reduces the maximum height of the main picture*/
+        right: 0;
+        top: 0;
+    }
+
+    .picture img.photo-two {
+        width: 45%; /*reduces the width of the second picture*/
+        height: auto; /*makes the height of the second picture adjust to its width*/
+        left: 5%; /*moves the second picture closer to the left*/
+        bottom: 0px; /*moves the second picture closer to the top*/
+    }
+
+    footer {
+        margin-top: 10px; /*reduces the space above the footer*/
+        padding: 10px 15px; /*reduces the padding inside the footer*/
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .top-row {
+        flex-direction: row; /*keeps the title and button next to each other*/
+        align-items: flex-start; /*aligns the title and navigation to the left*/
+        padding: 15px; /*reduces the padding around the top row*/
+        gap: 15px; /*reduces the space between the title and navigation*/
+    }
+
+    .title-box {
+        font-size: 35px; /*reduces the size of the title*/
+        padding: 5px 20px; /*reduces the padding inside the title box*/
+    }
+
+    nav ul {
+        flex-direction: column; /*places the buttons under each other*/
+        width: 100%; /*makes the buttons take the full width of their container*/
+        gap: 8px; /*reduces the space between the buttons*/
+    }
+
+    nav a {
+        width: 100%; /*makes the buttons take the full width of their container*/
+        font-size: 16px; /*reduces the size of the text*/
+    }
+
+    .question h2 {
+        font-size: 24px; /*reduces the size of the question*/
+        width: 90%; /*reduces the width of the question*/
+        margin: 25px auto 10px; /*centers the question and adds space above and below*/
+    }
+
+    .text {
+        font-size: 18px; /*reduces the size of the text*/
+        width: 90%; /*reduces the width of the text*/
+        max-width: none;
+        margin: 0 auto; /*centers the text*/
+        padding: 10px; /*reduces the padding inside the text box*/
+    }
+
+    .content {
+        flex-direction: column; /*places the text and pictures under each other*/
+        width: 100%; /*makes the content take the full width of its container*/
+        align-items: center;
+        gap: 20px; /*reduces the space between the text and pictures*/
+    }
+
+    .picture {
+        width: 90%; /*makes the picture area take the full width of its container*/
+        height: auto; /*makes the height of the picture area adjust to its width*/
+        margin: 20px auto; /*adds space above the pictures and removes the space below*/
+        display: flex; /*uses flexbox to arrange the pictures*/
+        flex-direction: column; /*places the pictures under each other*/
+        align-items: center; /*centers the pictures*/
+        gap: 15px; /*reduces the space between the pictures*/
+    }
+    .picture img.photo-one,
+    .picture img.photo-two {
+        position: static; /*removes the absolute positioning of the pictures*/
+        width: 100%; /*reduces the width of the pictures*/
+        height: auto; /*makes the height of the pictures adjust to their width*/
+        max-height: none;
+        object-fit: cover;
+    }
+
+    footer {
+        margin-top: 20px; /*reduces the space above the footer*/
+        padding: 10px 15px; /*reduces the padding inside the footer*/
+    }
+}

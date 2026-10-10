@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #231512;
+    margin: 0;
+    min-height: 100vh; /* Makes the page fill at least the full screen height */
+    display: flex; /* Uses Flexbox for the whole page */
+    flex-direction: column; /* Places page sections vertically */
+}
+
+main {
+    flex: 1; /* Pushes the footer toward the bottom of the screen */
+}
+
+/*Title and main menu on the same line*/
+.top-row {
+    display: flex; /*makes the title and main menu on the same line*/
+    align-items: center; /*keeps the title and main menu centered*/
+    justify-content: space-between; /*puts the title on the left and the main menu on the right*/
+    padding: 20px 20px; /*space around the whole top row*/
+}
+
+/*Main menu*/
+nav ul {
+    display: flex; /* makes the list items display in a row */
+    gap: 40px; /* space between the buttons */
+
+    list-style: none; /* removes the default bullet points */
+    padding: 0; /* space around the whole menu */
+    margin: 0; /* removes the default margin */
+    }
+
+nav li {
+    margin: 0; /* removes the default margin */
+    }
+
+nav a {
+    display: block; /* makes the whole buttin clicable */
+
+    width: 130px; /* width of the button */
+    padding: 10px 0px; /* space inside the button */
+
+    background-color: #563527; /* color of the button */
+    color: whitesmoke; /* text color */
+
+    text-align: center; /* centers the text inside the button */
+    text-decoration: none; /* removes the underline from the text */
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 18px; /* size of the text */
+    border-radius: 8px; /* rounded corners */
+}
+
+/*Changes the color of the button when the mouse is over it*/
+nav a:hover {
+    background-color: #895c39; /* color of the button when the mouse is over it */
+}
+
+.title-box{
+    display: flex;
+    align-items: center; /* keeps the text centered */
+    gap: 30px;
+  
+    background-color: #563527; /*dark box with the title*/
+    color: whitesmoke; /*text color*/
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    
+    padding: 5px 35px; /* space inside */
+    border-radius: 12px; /* rounded corners */
+
+    width: fit-content;  /* box fits around the text */
+    margin-left: 0px; /* moves the box to the right */
+    margin-top: 0px; /* moves the box down */
+
+}
+
+.title-box h1 {
+    margin: 0; /* removes default margin */
+    font-size: inherit; /* inherits the font size from the parent */
+    font-weight: inherit; /* inherits the font weight from the parent */
+
+}
+
+.text h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    width: 100%; /*makes the heading use the full available width*/
+    margin: 50px auto 10px; /*centers the heading block*/
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.essay {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 22px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center;
+    width: 100%; /*makes the text block use the available width*/
+    padding: 0 15px; /*adds 15px space on the left and right*/
+    box-sizing: border-box; /*keeps padding inside the width*/
+
+    margin: 15px auto 0; /*centers the text block*/
+    margin-top: 15px;
+    color: wheat;  
+}
+footer {
+    color: whitesmoke;
+}
+
+.menu-toggle {
+    display: none; /*hides the hamburger menu in desktop*/
+} 
+
+/*Tablet*/
+@media (max-width: 1200px) {
+    .top-row {
+        display: flex; /*keeps the title and hamburger button on the same line */
+        justify-content: space-between; /* places the title on the left and the hamburger on the right */
+        align-items: flex-start; /*aligns them vertically */
+        padding: 20px; /*adds space around the top row */
+        gap: 20px; /*keeps a small gap between the elements */
+    }
+
+    .menu-toggle { /*shows the humburger button on tablet*/
+        display: block; /*makes the button visible*/
+        width: auto;
+        margin-left: auto;
+        background-color: #563527;
+        color: whitesmoke;
+        border: none; /*removes the default button border*/
+        border-radius: 8px;
+        font-size: 28px;
+        padding: 8px 15px; /*adds space insdie the button*/
+        cursor: pointer;
+    }
+
+    /* hides the navigation links until the hamburger is clicked */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    /*shows the navigation links when javascript adds the show class */
+    nav ul.show {
+        display: flex;
+    }
+    
+    /*makes the navigation buttons fit the opened menu */
+    nav a {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .title-box {
+        font-size: 45px; /*reduces the size of the title*/
+    }
+
+    .text h2 {
+        font-size: 25px; /*reduces the size of the question*/
+        width: 90%; /*reduces the width of the question*/
+        margin-left: auto; /*centers the question*/
+        margin-right: auto; /*centers the question*/
+    }
+
+    .essay {
+        width: 90%; /*makes the report text fit the tablet screen*/
+        max-width: 800px; /*prevents the text from becoming too wide*/
+        margin-left: auto; /*centers the text*/
+        margin-right: auto; /*centers the text*/
+        font-size: 20px; /*makes the report text slightly smaller*/
+    }
+
+    footer {
+        margin-top: 30px; /*reduces the space above the footer*/
+        padding: 10px 20px; /*reduces the padding inside the footer*/
+        font-size: 16px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .top-row {
+        flex-direction: row; /*keeps the title and button next to each other*/
+        align-items: flex-start; /*aligns the title and navigation to the left*/
+        padding: 15px; /*reduces space around the header*/
+        gap: 15px; /*reduces the space between the title and navigation*/
+    }
+
+    .title-box {
+        font-size: 35px; /*reduces the size of the title*/
+        padding: 5px 20px; /*reduces space inside the title box*/
+    }
+
+    nav ul {
+        flex-direction: column; /*places navigation buttons vertically*/
+        gap: 8px; /*reduces the space between the buttons*/
+        width: 100%; /*uses the available mobile width*/
+    }
+
+    nav a {
+        width: 100%x; /*makes each menu button fill the available width*/
+        font-size: 16px; /*reduces the size of the text*/
+    }
+
+    .text h2 {
+        font-size: 25px; /*reduces the size of the heading*/
+        width: 90%; /*makes the heading fit the mobile screen*/
+        margin: 25px auto 10px; /*centers the heading and controls spacing*/
+    }
+
+    .essay {
+        font-size: 15px; /*reduces the size of the text*/
+        line-height: 1.6; /*makes long text easier to read*/
+        width: 90%; /*makes the report text fit the mobile screen*/
+        max-width: none; /*removes the tablet maximum width*/
+        margin: 10px auto 30px; /*centers the report and adds vertical spacing*/
+    }
+
+    footer {
+        margin-top: 20px; /*reduces the space above the footer*/
+        padding: 10px 15px; /*reduces the padding inside the footer*/
+        font-size: 14px;
+    }
+}

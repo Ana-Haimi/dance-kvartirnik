@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+      <!--Title and main menu-->
+    <header class="top-row">
+        <!--title on the left side-->
+        <div class="title-box">
+             <h1>Registration</h1>
+        </div>
+    <!--Main menu on the right side-->
+        <nav>
+            <!-- Hamburger button for tablet and mobile -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- Main menu -->
+             <ul id="nav-menu">
+                 <li><a href="../home/index.html">Home</a></li>
+                 <li><a href="../about/index.html">About</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                 <li><a href="../registration/index.html">Registration</a></li>
+                 <li><a href="../report/index.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section>
+        
+            <div class="text">
+                <h2>Number of spots is limited, so don’t lose your opportunity to come — register now.</h2>
+            </div>
+    </section>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="0de6d578-3cac-482e-8db9-457d6a39d246">
+
+            <div class="name-section">
+                <label for="name">Name:</label>
+                <!--input box where the user can type their name, "Your name" disappears when they type-->
+                <input type="text" id="name" name="Name" 
+                class="name-box" placeholder="Your name" required> 
+            </div>
+
+            <div class="username-section">
+                <label for="username">Username:</label>
+                <!--input box where the user can type their name, "Your username" disappears when they type-->
+                <input type="text" id="username" name="Username"
+                class="name-box" placeholder="Your username" required>
+            </div>
+ 
+            <div class="email-section">
+                <label for="email">Email:</label>
+                <!--input box where the user can type their name, "example@email.com" disappears when they type-->
+                <input type="email" id="email" name="Email"
+                class="name-box" placeholder="example@email.com" required>
+            </div>
+
+          <!--Registration button-->
+    <div class="register-section">
+        <button class="register-button" type="submit">Register</button>
+    </div>
+
+    </form>
+
+    <section>
+            <div class="last">
+                 <p>See you there!</p>
+            </div>
+    </section>
+</main>
+
+<footer>Made by Ana 2026</footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle"); // finds the hamburger button
+    const navMenu = document.getElementById("nav-menu"); // finds the navigation menu
+
+    menuToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("show");
+})
+</script>
+
+</body>
+</html>

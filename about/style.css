@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #231512;
+    margin: 0;
+    min-height: 100vh; /* Makes the page fill at least the full screen height */
+    display: flex; /* Uses Flexbox for the whole page */
+    flex-direction: column; /* Places page sections vertically */
+}
+
+main {
+    flex: 1; /* Pushes the footer toward the bottom of the screen */
+}
+
+/*Title and main menu on the same line*/
+.top-row {
+    display: flex; /*makes the title and main menu on the same line*/
+    align-items: center; /*keeps the title and main menu centered*/
+    justify-content: space-between; /*puts the title on the left and the main menu on the right*/
+    padding: 20px 20px; /*space around the whole top row*/
+}
+
+/*Main menu*/
+nav ul {
+    display: flex; /* makes the list items display in a row */
+    gap: 40px; /* space between the buttons */
+
+    list-style: none; /* removes the default bullet points */
+    padding: 0; /* space around the whole menu */
+    margin: 0; /* removes the default margin */
+    }
+
+nav li {
+    margin: 0; /* removes the default margin */
+    }
+
+nav a {
+    display: block; /* makes the whole buttin clicable */
+
+    width: 130px; /* width of the button */
+    padding: 10px 0px; /* space inside the button */
+
+    background-color: #563527; /* color of the button */
+    color: whitesmoke; /* text color */
+
+    text-align: center; /* centers the text inside the button */
+    text-decoration: none; /* removes the underline from the text */
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 18px; /* size of the text */
+    border-radius: 8px; /* rounded corners */
+}
+
+/*Changes the color of the button when the mouse is over it*/
+nav a:hover {
+    background-color: #895c39; /* color of the button when the mouse is over it */
+}
+
+.title-box{
+    display: flex;
+    align-items: center; /* keeps the text centered */
+    gap: 30px;
+  
+    background-color: #563527; /*dark box with the title*/
+    color: whitesmoke; /*text color*/
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    
+    padding: 5px 35px; /* space inside */
+    border-radius: 12px; /* rounded corners */
+
+    width: fit-content;  /* box fits around the text */
+    margin-left: 0px; /* moves the box to the right */
+    margin-top: 0px; /* moves the box down */
+}
+
+.title-box h1 {
+    margin: 0; /* removes default margin */
+    font-size: inherit; /* inherits the font size from the parent */
+    font-weight: inherit; /* inherits the font weight from the parent */
+} 
+
+.text {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 25px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat;
+
+    width:100%; /* width of the text */
+    margin: 30px auto 0;
+}
+
+.next-event {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 20px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat;
+
+    width:100%; /* width of the text */
+    margin: 15px auto 30px;
+}
+
+.content {
+    display: flex; /* makes the content display in a row */
+    justify-content: space-between; /* puts the left content on the left and the right content on the right */
+    align-items: flex-start; /* keeps the content aligned to the top */
+    width: 100%; /* width of the content */
+}
+
+.left-content {
+    width: 55%; /* width of the left content */
+    padding-left: 30px; /* space between the left content and the right content */
+}
+
+.right-content {
+    width: 40%; /* width of the right content */
+    display: flex; /* makes the content display in a column */
+    justify-content: flex-end; /* puts the content at the bottom */
+    padding-right: 30px; /* space between the left and right content */
+}
+
+.list-title h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat;
+
+    width:100%; /* width of the text */
+    margin: 30px auto 0;
+}
+
+.list {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 25px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat;
+
+    width:100%; /* width of the text */
+    margin: 15px auto 30px;
+}
+
+.time {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 20px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat;
+
+    width:100%; /* width of the text */
+    margin: 100px auto 30px; /* space above and below the text */
+}
+
+.location {
+    margin-top: 60px; /* space above the map */
+    margin-right: 120px; /* space to the right of the map */
+}
+
+.location iframe {
+   width: 425px; /* width of the map */
+    height: 350px; /* height of the map */
+    border: 0; /* removes the border around the map */
+    border-radius: 8px; /* rounded corners */
+}
+
+footer {
+    color:whitesmoke;
+}
+
+.menu-toggle {
+    display: none; /*hides the hamburger menu in desktop*/
+} 
+
+/*Tablet*/
+@media (max-width: 1200px) {
+    .top-row {
+        display: flex; /*keeps the title and hamburger button on the same line */
+        justify-content: space-between; /* places the title on the left and the hamburger on the right */
+        align-items: flex-start; /*aligns them vertically */
+        padding: 20px; /*adds space around the top row */
+        gap: 20px; /*keeps a small gap between the elements */
+    }
+
+    .menu-toggle { /*shows the humburger button on tablet*/
+        display: block; /*makes the button visible*/
+        width: auto;
+        margin-left: auto;
+        background-color: #563527;
+        color: whitesmoke;
+        border: none; /*removes the default button border*/
+        border-radius: 8px;
+        font-size: 28px;
+        padding: 8px 15px; /*adds space insdie the button*/
+        cursor: pointer;
+    }
+
+    /* hides the navigation links until the hamburger is clicked */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    /*shows the navigation links when javascript adds the show class */
+    nav ul.show {
+        display: flex;
+    }
+    
+    /*makes the navigation buttons fit the opened menu */
+    nav a {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .title-box {
+        font-size: 45px; /*makes the title smaller*/
+    }
+
+    .text {
+        font-size: 22px; /*makes text smaller*/
+    }
+
+    .content {
+        flex-direction: column; /*places the left and right contenc under each other*/
+        align-items: center; /*centers both content sections*/
+        width: 100%; /*uses the full available width*/    
+    }
+
+    .left-content, 
+    .right-content {
+        width: 90%; /*makes both content areas fit the tablet screen*/
+        padding-left: 0; /*removes the desktop left padding*/
+        padding-right: 0; /*removes the desktop right padding*/
+    }
+
+    .location {
+        margin-top: 30px; /*adds space above the map*/
+        margin-right: 0; /*removes the large desktop margin on the right*/
+    }
+
+    .location iframe {
+        width: 100%; /*makes the map adapt to the available width*/
+        max-width: 425px; /*prevents the map from becoming larger than on desktop */
+        height: 320px; /*makes the map slightly shorter on tablets*/
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .top-row {
+        padding: 15px; /*reduces the padding around the top row*/
+    }
+
+    .title-box {
+        font-size: 35px; /*makes the title smaller*/
+        padding: 5px 20px; /*reduces the padding inside the title box*/
+    }
+
+    nav ul {
+        flex-direction: column; /*stacks the navigation buttons vertically*/
+        width: 100%; /*makes the navigation buttons take the full width*/
+    }
+
+    nav a {
+        width: 100%; /*makes the navigation buttons take the full width*/
+        box-sizing: border-box; /*ensures the padding is included in the width*/
+        font-size: 16px; /*makes navigation text smaller*/
+    }
+
+    .text {
+        font-size: 18px; /*makes text smaller*/
+        width: 90%; /*reduces the width of the text*/
+        margin: 20px auto; /*centers the text and adds space above and below*/
+    }
+
+    .next-event {
+        font-size: 18px; /*makes text smaller*/
+        width: 90%; /*reduces the width of the text*/
+        margin-bottom: 20px; /*adds space below the text*/
+    }
+
+     .list-title h2 {
+        font-size: 25px; /*makes the list title smaller*/
+        margin-top: 20px; /*reduces the space above the list title*/
+        margin-bottom: 10px; /*reduces the space below the list title*/
+    }
+
+    .list, 
+    .time {
+        font-size: 18px; /*makes the list and time text smaller*/
+        width: 100%; /*reduces the width of the list and time text*/
+        margin-left: 0; /*removes the left margin*/
+        margin-right: 0; /*removes the right margin*/
+        margin: 30px auto 20px; /*centers the list and time text and adds space above and below*/
+    }
+
+    .content {
+        flex-direction: column; /*stacks the left and right content vertically*/
+        width: 100%; /*makes the content take the full width*/
+    }
+
+    .left-content, 
+    .right-content {
+        width: 100%; /*makes both content areas take the full width*/
+        padding: 0 15px; /*adds padding on the left and right*/
+        box-sizing: border-box; /*ensures the padding is included in the width*/
+    }
+
+    .location {
+        margin-top: 20px; /*reduces the space above the map*/
+        margin-right: 0; /*removes the right margin*/
+        width: 100%; /*makes the location section take the full width*/
+    }
+
+    .location iframe {
+        width: 100%; /*makes the map take the full width*/
+        height: 280px; /*reduces the height of the map*/
+    }
+
+    footer {
+        margin-top: 20px; /*reduces the space above the footer*/
+        padding: 10px 15px; /*reduces the padding inside the footer*/
+    }
+}

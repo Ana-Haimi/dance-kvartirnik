@@ -1,0 +1,452 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #231512;
+    margin: 0;
+    min-height: 100vh; /* Makes the page fill at least the full screen height */
+    display: flex; /* Uses Flexbox for the whole page */
+    flex-direction: column; /* Places page sections vertically */
+}
+
+main {
+    flex: 1; /* Pushes the footer toward the bottom of the screen */
+}
+
+/*Title and main menu on the same line*/
+.top-row {
+    display: flex; /*makes the title and main menu on the same line*/
+    align-items: center; /*keeps the title and main menu centered*/
+    justify-content: space-between; /*puts the title on the left and the main menu on the right*/
+    padding: 20px 20px; /*space around the whole top row*/
+}
+
+/*Main menu*/
+nav ul {
+    display: flex; /* makes the list items display in a row */
+    gap: 40px; /* space between the buttons */
+
+    list-style: none; /* removes the default bullet points */
+    padding: 0; /* space around the whole menu */
+    margin: 0; /* removes the default margin */
+    }
+
+nav li {
+    margin: 0; /* removes the default margin */
+    }
+
+nav a {
+    display: block; /* makes the whole buttin clicable */
+
+    width: 130px; /* width of the button */
+    padding: 10px 0px; /* space inside the button */
+
+    background-color: #563527; /* color of the button */
+    color: whitesmoke; /* text color */
+
+    text-align: center; /* centers the text inside the button */
+    text-decoration: none; /* removes the underline from the text */
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 18px; /* size of the text */
+    border-radius: 8px; /* rounded corners */
+}
+
+/*Changes the color of the button when the mouse is over it*/
+nav a:hover {
+    background-color: #895c39; /* color of the button when the mouse is over it */
+}
+
+        /* Title box styles */
+.title-box{
+    display: flex;
+    align-items: center; /* keeps the text centered */
+    gap: 20px;
+  
+    background-color: #563527; /*dark box with the title*/
+    color: whitesmoke; /*text color*/
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.1;
+    
+    padding: 5px 35px; /* space inside */
+    border-radius: 12px; /* rounded corners */
+
+    width: fit-content;  /* box fits around the text */
+    margin-left: 0px; /* moves the box to the right */
+    margin-top: 0px; /* moves the box down */
+}
+
+.title-box h1 {
+    margin: 0; /* removes default margin */
+    font-size: inherit; /* inherits the font size from the parent */
+    font-weight: inherit; /* inherits the font weight from the parent */
+} 
+
+.text {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    color: wheat
+}
+
+.text h2 {
+    font-size: 25px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    margin: 0; /* removes default margin */
+}
+
+    /* Name section styles */
+.name-section {
+    width: 260px; /* width of the whole name section */
+    margin: 90px auto 0 auto; /*centers the whole section on the website*/
+}
+
+.name-section label {
+    display: block; /*puts "Name:" on its own line */
+    width: 260px; /* makes the label take up the full width of the name section */
+    font-size: 18px; /* size of the "Name:" text */
+    margin-bottom: 0 0 5px 0; /* empty space between "Name:" and the input field */
+    text-align: left; /* aligns the text to the left */
+    padding: 0; /*removes extra space around the "Name:" text */
+    color: wheat;
+}
+
+.name-box {
+    display: block; /* puts "Name:" on its own line */
+
+    background-color: white; 
+    color: lightgray;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 300; /*thinkness of the text */
+
+    padding: 0px 15px; /* space inside the box: 0px top/bottom, 15px left/right */
+    border: none; /* removes the default border */
+    border-radius: 12px; /* rounded corners */
+
+    width: 260px; /* makes the box take up the full width of the name section */
+    height: 60px; /* height of the box */
+    box-sizing: border-box; /* includes padding in the width calculation */
+
+    margin: 0; /*keeps the "Your name" box directly alignd with "Name:" text */
+}
+
+/*changes only the "Your name" text before the user types*/
+.name-section input::placeholder {
+    color: black; /* changes the color of the placeholder text */
+    font-family: 'Playfair Display', serif; /* changes the font of the placeholder text */
+    font-size: 18px; /* changes the size of the placeholder text */
+    font-weight: 300; /* changes the weight of the placeholder text */
+}
+
+.username-section {
+    width: 260px; /* width of the whole username section */
+    margin: 25px auto 0 auto; /*centers the whole section on the website*/
+}
+
+.username-section label {
+    display: block; /*puts "Username:" on its own line */
+    width: 260px; /* makes the label take up the full width of the username section */
+    font-size: 18px; /* size of the "Username:" text */
+    margin-bottom: 0 0 5px 0; /* empty space between "Username:" and the input field */
+    text-align: left; /* aligns the text to the left */
+    padding: 0; /*removes extra space around the "Username:" text */
+    color: wheat;
+}
+
+.name-box {
+    display: block; /* puts "Username:" on its own line */
+
+    background-color: white; 
+    color: lightgray;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 300; /*thinkness of the text */
+
+    padding: 0px 15px; /* space inside the box: 0px top/bottom, 15px left/right */
+    border: none; /* removes the default border */
+    border-radius: 12px; /* rounded corners */
+
+    width: 260px; /* makes the box take up the full width of the username section */
+    height: 60px; /* height of the box */
+    box-sizing: border-box; /* includes padding in the width calculation */
+
+    margin: 0; /*keeps the "Your username" box directly alignd with "Username:" text */
+}
+
+.username-section input::placeholder {
+    color: black; /* changes the color of the placeholder text */
+    font-family: 'Playfair Display', serif; /* changes the font of the placeholder text */
+    font-size: 18px; /* changes the size of the placeholder text */
+    font-weight: 300; /* changes the weight of the placeholder text */
+}
+
+.email-section {
+    width: 260px; /* width of the whole email section */
+    margin: 25px auto 0 auto; /*centers the whole section on the website*/
+}
+
+.email-section label {
+    display: block; /*puts "Email:" on its own line */
+    width: 260px; /* makes the label take up the full width of the email section */
+    font-size: 18px; /* size of the "Email:" text */
+    margin-bottom: 0 0 5px 0; /* empty space between "Email:" and the input field */
+    text-align: left; /* aligns the text to the left */
+    padding: 0; /*removes extra space around the "Email:" text */
+    color: wheat;
+}
+
+.email-box {
+    display: block; /* puts "Email:" on its own line */
+
+    background-color: white; 
+    color: lightgray;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 300; /*thinkness of the text */
+
+    padding: 0px 15px; /* space inside the box: 0px top/bottom, 15px left/right */
+    border: none; /* removes the default border */
+    border-radius: 12px; /* rounded corners */
+
+    width: 260px; /* makes the box take up the full width of the email section */
+    height: 60px; /* height of the box */
+    box-sizing: border-box; /* includes padding in the width calculation */
+
+    margin: 0; /*keeps the "example@gmail.com" box directly alignd with "Email:" text */
+}
+
+.email-section input::placeholder {
+    color: black; /* changes the color of the placeholder text */
+    font-family: 'Playfair Display', serif; /* changes the font of the placeholder text */
+    font-size: 18px; /* changes the size of the placeholder text */
+    font-weight: 300; /* changes the weight of the placeholder text */
+}
+
+.register-section {
+   width: 320px; /* width of the whole register section */
+    margin: 25px auto 0 auto; /*centers the whole section on the website*/
+    text-align: center; /*centers the button in the section*/
+}
+
+.register-button {
+    display: inline-block; /* allows the button to be centered */
+
+    width: 320px; /* width of the button */
+    height: 70px; /* height of the button */
+
+    background-color: #895c39; /* color of the button */
+    color: whitesmoke; /* text color */
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 25px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+
+    border: none; /* removes the default border */
+    border-radius: 12px; /* rounded corners */
+
+    margin: 0;
+    cursor: pointer; /* changes the cursor to a pointer when hovering over the button */
+}
+
+.register-button:hover {
+    background-color: #563527; /* color of the button when the mouse is over it */
+}
+
+.last {
+    text-align: center; /*centers the text in the section*/
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    color: darkgray; /* text color */
+    margin-top: 50px; /* space above the text */
+}
+
+footer {
+    color:whitesmoke;
+}
+
+.menu-toggle {
+    display: none; /*hides the hamburger menu in desktop*/
+} 
+
+/*Tablet*/
+@media (max-width: 1200px) {
+
+    main {
+        display: flex; /*uses flexbox inside the main content area*/
+        flex-direction: column; /*keeps all main elements one under another*/
+        justify-content: center; /*centers the registration content vertically*/
+    }
+    .top-row {
+        display: flex; /*keeps the title and hamburger button on the same line */
+        justify-content: space-between; /* places the title on the left and the hamburger on the right */
+        align-items: flex-start; /*aligns them vertically */
+        padding: 20px; /*adds space around the top row */
+        gap: 20px; /*keeps a small gap between the elements */
+    }
+
+    .menu-toggle { /*shows the humburger button on tablet*/
+        display: block; /*makes the button visible*/
+        width: auto;
+        margin-left: auto;
+        background-color: #563527;
+        color: whitesmoke;
+        border: none; /*removes the default button border*/
+        border-radius: 8px;
+        font-size: 28px;
+        padding: 8px 15px; /*adds space insdie the button*/
+        cursor: pointer;
+    }
+
+    /* hides the navigation links until the hamburger is clicked */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    /*shows the navigation links when javascript adds the show class */
+    nav ul.show {
+        display: flex;
+    }
+    
+    /*makes the navigation buttons fit the opened menu */
+    nav a {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .title-box {
+        font-size: 45px; /*makes the page title cmaller on tablets*/
+    }
+
+    .text h2 {
+        font-size: 22px; /*makes the introductory heading smaller*/
+        width: 90%; /*prevents the text from touching the screnn edges*/
+        margin-left: auto; /*centers the heading*/
+        margin-right: auto; /*centers the heading*/
+    }
+
+    .name-section,
+    .username-section,
+    .email-section {
+        width: 60%; /*makes the form sections wider and responsive*/
+        max-width: 520px; /*prevents the form from becoming too wide*/
+        min-width: 300px; /*prevetns the form from becoming too narrow*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .name-section label,
+    .username-section label, 
+    .email-section label {
+        width: 100%; /*makes the label follow the responsive form width*/
+    }
+
+    .name-box {
+        width: 100%; /*makes the input fields fill the form section*/
+    }
+
+    .register-section {
+        width: 60%; /*makes the button section responsive*/
+        max-width: 520px; /*prevents the button section from becoming too wide*/
+         min-width: 300px; /*prevetns the form from becoming too narrow*/
+    }
+
+    .register-button {
+        width: 100%; /*makes the registration button fit the form width*/
+        height: 60px; /*makes the button slightly smaller*/
+        font-size: 22px; /*makes the button text smaller*/
+    }
+
+    .last {
+        font-size: 26px; /*makes the final message smaller*/
+        margin-top: 30px; /*reduces the space above the final message*/
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 10px 20px; /*adds space inside the footer*/
+        font-size: 16px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    .top-row {
+        flex-direction: row; 
+        align-items: flex-start; /*aligns the header content to the left*/
+        padding: 15px; /*reduces the space around the header*/
+        gap: 15px; /*adds space between the title and navigation*/
+    }
+
+    .title-box {
+        font-size: 35px;
+        padding: 5px 20px; /*reduces the space inside the title box*/
+    }
+
+    nav ul {
+        flex-direction: column; /*places navigation buttons vertically*/
+        width: 100%; /*uses the available mobile width*/
+        gap: 8px; /*adds small space between navigation buttons*/
+    }
+
+    nav a {
+        width: 100%; /*makes each navigation button fill the available width*/
+        font-size: 16px;
+    }
+
+    .text h2 {
+        font-size: 19px;
+        width: 90%; /*leaves space on both sides of the text*/
+        margin: 25px auto; /*centers the heading and adds vertical spacing*/
+    }
+
+    .name-section,
+    .username-section,
+    .email-section {
+        width: 90%; /*makes the form use most of the phone width*/
+        max-width: none; /*removes the tablet maximum width*/
+        min-width: none; /*removes the tablet minimum width on small screens*/
+        margin: 20px auto 0; /*centers each form section and reduces vertical gaps*/
+    }
+
+    .name-section label, 
+    .username-section label,
+    .email-section label {
+        width: 100%; /*makes labels follow the form width*/
+        font-size: 16px;
+    }
+
+    .name-box {
+        width: 100%; /*makes input fields responsive*/
+        height: 52px; /*makes input slightly shorter on mobile*/   
+        font-size: 16px;
+    }
+     .register-section {
+        width: 90%; /*makes the button section fit the phone width*/
+        max-width: none; /*removes the tablet maxmimun width*/
+        min-width: none; /*removes the tablet minimum width on small screens*/
+        margin: 25px auto 0; /*centers the button and adds space above it*/
+    }
+
+    .register-button {
+        width: 100%; /*makes the register button use the available width*/
+        height: 58px; /*makes the button comfortable to tap*/
+        font-size: 20px;
+    }
+
+    .last {
+        font-size: 22px;
+        margin-top: 30px; /*controls the space above the final message*/
+    }
+
+    footer {
+        margin-top: 20px; /*adds space above the footer*/
+        padding: 10px 15px; /*adds space inside the footer*/ 
+    }
+}

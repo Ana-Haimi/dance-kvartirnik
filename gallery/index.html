@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Title and main menu-->
+    <header class="top-row">
+        <!--title on the left side-->
+        <div class="title-box">
+             <h1>Gallery</h1>
+        </div>
+    <!--Main menu on the right side-->
+        <nav>
+            <!-- Hamburger button for tablet and mobile -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- Main menu -->
+             <ul id="nav-menu">
+                 <li><a href="../home/index.html">Home</a></li>
+                 <li><a href="../about/index.html">About</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                 <li><a href="../registration/index.html">Registration</a></li>
+                 <li><a href="../report/index.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section>
+        <iframe
+            class="gallery-iframe"
+            src="photos.html"
+            title="Dance Kvartirnik photo gallery">
+        </iframe>
+    </section>
+</main>
+
+<footer>Made by Ana 2026</footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle"); // finds the hamburger button
+    const navMenu = document.getElementById("nav-menu"); // finds the navigation menu
+
+    menuToggle.addEventListener("click", function(){
+    navMenu.classList.toggle("show");
+})
+</script>
+
+</body>
+</html>

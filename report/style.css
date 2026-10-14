@@ -167,6 +167,112 @@ footer {
     display: none; /*hides the hamburger menu in desktop*/
 } 
 
+
+.specifications {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 20px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center;
+    width: 100%; /*makes the text block use the available width*/
+    padding: 0 15px; /*adds 15px space on the left and right*/
+    box-sizing: border-box; /*keeps padding inside the width*/
+
+    margin: 15px auto 0; /*centers the text block*/
+    margin-top: 15px;
+    color: wheat;
+}
+
+.specifications h3 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 23px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    width: 100%; /*makes the heading use the full available width*/
+    margin: 50px auto 10px; /*centers the heading block*/
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.specifications h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    width: 100%; /*makes the heading use the full available width*/
+    margin: 50px auto 10px; /*centers the heading block*/
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.mockups h2 {
+    font-family: 'Playfair Display', serif; /* font of the text */
+    font-size: 30px; /* size of the text */
+    font-weight: 300; /*thinkness of the text */
+    line-height: 1.5; /* space between lines of text */
+    text-align: center; /* aligns the text to both the left and right sides */
+    width: 100%; /*makes the heading use the full available width*/
+    margin: 50px auto 10px; /*centers the heading block*/
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.specifications img {
+    max-width: 55%;
+}
+
+
+/* Mockups - Desktop */
+.mockups {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: wheat;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 15px auto 0;
+}
+
+.mockups h2 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: whitesmoke;
+    text-align: center;
+    margin: 30px auto 10px;
+}
+
+.mockups h3 {
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: whitesmoke;
+    text-align: center;
+    margin: 30px auto 10px;
+}
+
+.mockup-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 10px auto 30px;
+}
+
+.mockup-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 /*Tablet*/
 @media (max-width: 1300px) {
     .top-row {
@@ -242,6 +348,32 @@ footer {
         padding: 10px 20px; /*reduces the padding inside the footer*/
         font-size: 16px;
     }
+
+    .specifications {
+        font-size: 18px; 
+    } 
+    .specifications h2 {
+        font-size: 22px;
+    }
+    .specifications h3 {
+        font-size: 23px;
+    }
+    .specifications img {
+        max-width: 55%;
+    }
+    .mockups {
+        font-size: 18px;
+    }
+    .mockups h2 {
+        font-size: 22px;
+    }
+    .mockups h3 {
+        font-size: 23px;
+    }
+    .mockup-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 /*Mobile*/
@@ -296,5 +428,40 @@ footer {
         margin-top: 20px; /*reduces the space above the footer*/
         padding: 10px 15px; /*reduces the padding inside the footer*/
         font-size: 14px;
+    }
+    
+    .specifications {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    .specifications h2 {
+        font-size: 22px;
+    }
+    .specifications h3 {
+        font-size: 20px;
+    }
+    .specifications p,
+    .specifications ul {
+        width: 90%;
+        margin: 10px auto 30px;
+    }
+    .specifications img {
+        max-width: 90%;
+    } 
+    .mockups {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    .mockups h2 {
+        font-size: 22px;
+    }
+    .mockups h3 {
+        font-size: 20px;
+    }
+    .mockup-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
